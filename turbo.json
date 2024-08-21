@@ -3,7 +3,24 @@
     "tasks": {
         "build": {
             "dependsOn": ["^build"],
+            "inputs": ["src/**", "package.json", "tsconfig.json", "vite.config.ts"],
             "outputs": ["dist/**"],
+            "outputLogs": "errors-only"
+        },
+        "test": {
+            "dependsOn": ["^build"],
+            "inputs": ["tests/**", "src/**", "package.json", "tsconfig.json", "vite.config.ts"],
+            "outputs": ["coverage/**"],
+            "outputLogs": "new-only"
+        },
+        "lint": {
+            "dependsOn": ["^build"],
+            "inputs": ["src/**", "scripts/**", "package.json", "tsconfig.eslint.json", "../../.prettierrc.json"],
+            "outputLogs": "errors-only"
+        },
+        "format": {
+            "dependsOn": ["^build"],
+            "inputs": ["src/**", "scripts/**", "package.json", "tsconfig.eslint.json", "../../.prettierrc.json"],
             "outputLogs": "errors-only"
         }
     }

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@hecka/typescript-config",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Forrest Collins",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig.json",
+    "display": "React",
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "lib": ["DOM", "DOM.Iterable", "WebWorker", "ESNext"],
+        "jsx": "react-jsx"
+    }
+}

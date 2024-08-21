@@ -1,0 +1,14 @@
+{
+    "dependencyTypes": ["dev", "peer", "prod"],
+    "semverRange": "^",
+    "source": ["package.json", "apps/*/package.json", "packages/*/package.json"],
+    "versionGroups": [
+        {
+            "label": "Internal configuration packages should be pinned to '*' (meaning any version is acceptable)",
+            "packages": ["**"],
+            "dependencies": ["@hecka/eslint-config-hecka", "@hecka/typescript-config", "@hecka/vitest-config"],
+            "dependencyTypes": ["dev"],
+            "pinVersion": "*"
+        }
+    ]
+}

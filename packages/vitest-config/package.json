@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@hecka/vitest-config",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "author": "Forrest Collins",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "vitest": "^2.0.5"
+  }
+}

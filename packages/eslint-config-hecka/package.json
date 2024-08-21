@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@hecka/eslint-config-hecka",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Forrest Collins",
+  "license": "MIT",
+  "dependencies": {
+    "eslint-config-neon": "^0.1.62",
+    "lodash.merge": "^4.6.2",
+    "typescript-eslint": "^8.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

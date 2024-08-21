@@ -4,20 +4,36 @@
   "private": true,
   "version": "0.0.1",
   "description": "The monorepo for all Hecka projects",
+  "author": "Forrest Collins",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "build": "turbo run build --concurrency=4",
+    "build:apps": "turbo run build --filter=...{apps/*} --concurrency=4",
+    "build:packages": "turbo run build --filter=...{packages/*} --concurrency=4",
+    "format": "turbo run format --concurrency=4",
+    "lint": "turbo run lint --concurrency=4",
+    "sync:find": "syncpack list-mismatches",
+    "sync:fix": "syncpack fix-mismatches && pnpm install --recursive",
+    "test": "turbo run test --concurrency=4",
     "update": "pnpm --recursive update --interactive",
     "update:latest": "pnpm --recursive update --interactive --latest"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Sappyoak/hecka.git"
+  "devDependencies": {
+    "eslint": "^9.9.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
+    "prettier": "^3.3.3",
+    "syncpack": "^12.4.0",
+    "turbo": "^2.0.14"
   },
-  "author": "Forrest Collins",
-  "license": "MIT",
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "pnpm@9.5.0"
+  "packageManager": "pnpm@9.5.0",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md,mdx,mjs,yml,yaml,css}": [
+      "prettier --ignore-unknown --write"
+    ]
+  }
 }
